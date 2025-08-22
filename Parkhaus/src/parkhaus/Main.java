@@ -1,33 +1,40 @@
 package parkhaus;
 import java.util.Scanner;
 
-public class Main { //tests
+public class Main {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
+        // Objekte erstellen
+        parkhaus parkhaus1 = new parkhaus();
+        ticketAutomat ticketAutomat1 = new ticketAutomat();
+        Schranke schranke1 = new Schranke();
 
-		parkhaus parkhaus1 = new parkhaus();
-		ticketAutomat ticketAutomat1 = new ticketAutomat();
-		Schranke schranke1 = new Schranke();
-		parkhaus1.autoErstellen();
-		parkhaus1.anzahlFreiePlaetze();
-		parkhaus1.reinfahren();
-		String input = scanner.nextLine();
-		if(input.equals("j") && parkhaus1.parkplatz > 0) {
-			ticketAutomat1.ticketZiehen();
-			parkhaus1.parklatzbenutzen();					//SRP
-			schranke1.öffnen();								//SRP
-			System.out.println("Drücken sie 'b' wenn sie ihre Parkgebühren bezahlen möchten");
-			String bezahlen = scanner.nextLine();
-			if (bezahlen.equals("b")) {
-				ticketAutomat1.ticketBezahlen();			//SRP
-		}
-		else {
-			parkhaus1.parkplatzBelegt();					//SRP
-		}
-	}
+        // Startzustand
+        parkhaus1.autoErstellen();
+        parkhaus1.anzahlFreiePlaetze();
+        parkhaus1.reinfahren();
 
-}
+        // Eingabe vom Nutzer
+        String input = scanner.nextLine();
+
+        // wenn Ticket gezogen wird und Platz frei ist
+        if (input.equals("j") && parkhaus1.parkplatz > 0) {
+            ticketAutomat1.ticketZiehen();
+            parkhaus1.parklatzbenutzen();
+            schranke1.öffnen();
+
+            System.out.println("Drücken Sie 'b' wenn Sie Ihre Parkgebühren bezahlen möchten");
+            String bezahlen = scanner.nextLine();
+
+            // Ticket wird bezahlt
+            if (bezahlen.equals("b")) {
+                ticketAutomat1.ticketBezahlen();
+            } else {
+                parkhaus1.parkplatzBelegt();
+            }
+        }
+    }
 }

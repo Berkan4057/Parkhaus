@@ -1,14 +1,12 @@
 package parkhaus;
 
-public class Schranke { //tests
+public class Schranke {
 
+    // Konstruktor
+    Schranke() { }
 
-
-	Schranke (){
-		
-	}
-
-	void öffnen() {
-		System.out.println("Schranken öffnen sich");
-	}
+    // Schranke öffnen
+    void öffnen() {
+        System.out.println("Schranken öffnen sich");
+    }
 }
