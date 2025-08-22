@@ -1,6 +1,6 @@
 package parkhaus;
 
-public class ticketAutomat {
+public class ticketAutomat { //test
 
 	long startTimer;
 	long endTimer;

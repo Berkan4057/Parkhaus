@@ -1,6 +1,6 @@
 package parkhaus;
 
-public class Schranke {
+public class Schranke { //test
 
 
 	Schranke (){

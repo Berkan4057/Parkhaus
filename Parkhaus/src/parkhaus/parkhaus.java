@@ -1,8 +1,8 @@
 package parkhaus;
 
-public class parkhaus {
+public class parkhaus { //Test
 
-	auto [] autos = new auto[100];
+	auto [] autos = new auto[100]; 
 
 	int parkplatz = 100;
 	parkhaus(){
