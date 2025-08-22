@@ -1,6 +1,6 @@
 package parkhaus;
 
-public class parkhaus { //Test
+public class parkhaus { //Tests
 
 	auto [] autos = new auto[100]; 
 

@@ -1,6 +1,6 @@
 package parkhaus;
 
-public class auto { //Test
+public class auto { //Tests
 String marke;
 	auto(String marke){
 		this.marke = marke;
